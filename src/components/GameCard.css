@@ -1,0 +1,86 @@
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 24px 18px;
+}
+
+.catalog-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.catalog-image {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: var(--raised);
+    border-radius: var(--radius-lg);
+}
+
+.catalog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover .catalog-image img {
+    transform: scale(1.04);
+}
+
+.catalog-rating {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    background: rgba(14, 16, 19, 0.82);
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.catalog-rating svg {
+    color: var(--accent);
+}
+
+.game-card-open {
+    display: none;
+}
+
+.catalog-info {
+    padding-top: 12px;
+}
+
+.catalog-meta {
+    display: flex;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.catalog-info h3 {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.catalog-card:hover h3 {
+    color: var(--accent-hover);
+}
+
+.catalog-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.catalog-score {
+    color: var(--text);
+}

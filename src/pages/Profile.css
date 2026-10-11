@@ -1,0 +1,459 @@
+.profile-page {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 40px var(--gutter) 0;
+}
+
+.profile-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.profile-heading h1 {
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.profile-heading p {
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+.profile-settings {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+.profile-settings:hover {
+    border-color: #3b424d;
+}
+
+/* Карточка пользователя */
+.profile-hero {
+    margin-top: 28px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+}
+
+.profile-cover {
+    height: 110px;
+    background: linear-gradient(135deg, #1d2a3a 0%, #16191e 100%);
+}
+
+.profile-main-info {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    padding: 0 28px 26px;
+}
+
+.profile-avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    margin-top: -40px;
+    background: var(--raised);
+    border: 4px solid var(--surface);
+    border-radius: var(--radius-lg);
+    color: var(--muted);
+}
+
+.profile-online {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 16px;
+    height: 16px;
+    background: #4cc38a;
+    border: 3px solid var(--surface);
+    border-radius: 50%;
+}
+
+.profile-identity {
+    flex: 1;
+    min-width: 0;
+    padding-top: 14px;
+}
+
+.profile-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-name-row h2 {
+    font-size: 24px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.nickname-edit,
+.nickname-save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--muted);
+}
+
+.nickname-edit:hover {
+    color: var(--text);
+}
+
+.nickname-save {
+    width: 38px;
+    height: 38px;
+    background: var(--accent);
+    border: 0;
+    color: var(--accent-ink);
+}
+
+.nickname-editor {
+    display: flex;
+    gap: 8px;
+}
+
+.nickname-editor input {
+    width: 100%;
+    max-width: 260px;
+    height: 38px;
+    padding: 0 12px;
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    outline: 0;
+    font-size: 16px;
+}
+
+.profile-identity > p {
+    margin-top: 2px;
+    color: var(--muted);
+}
+
+.profile-member-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.profile-identity .profile-email {
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.profile-logout {
+    margin-top: 14px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--danger);
+    font-size: 14px;
+}
+
+.profile-logout:hover {
+    text-decoration: underline;
+}
+
+.profile-level {
+    width: 190px;
+    flex-shrink: 0;
+    padding: 14px 16px;
+    background: var(--raised);
+    border-radius: var(--radius);
+}
+
+.profile-level > span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.profile-level strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.level-progress {
+    height: 4px;
+    margin: 8px 0 6px;
+    overflow: hidden;
+    background: var(--line);
+    border-radius: 2px;
+}
+
+.level-progress span {
+    display: block;
+    width: 10%;
+    height: 100%;
+    background: var(--accent);
+}
+
+.profile-level small {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Показатели */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+}
+
+.profile-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 22px;
+}
+
+.profile-stat-card + .profile-stat-card {
+    border-left: 1px solid var(--line);
+}
+
+.profile-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--raised);
+    border-radius: var(--radius);
+    color: var(--accent);
+}
+
+.profile-stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.profile-stat-card strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Панели */
+.profile-content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+    align-items: start;
+}
+
+.profile-panel {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+}
+
+.profile-panel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+.profile-panel-heading h2 {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile-panel-heading p {
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.favorite-games-list,
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.favorite-game {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px;
+    border-radius: var(--radius);
+}
+
+.favorite-game:hover {
+    background: var(--raised);
+}
+
+.favorite-game img {
+    width: 96px;
+    height: 54px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.favorite-game-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.favorite-game-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.favorite-game-info p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.favorite-game-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.favorite-game-info span svg {
+    color: var(--accent);
+}
+
+.favorite-remove {
+    display: flex;
+    padding: 8px;
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius);
+    color: var(--accent);
+}
+
+.favorite-remove:hover {
+    background: var(--line);
+    color: var(--muted);
+}
+
+.profile-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 0;
+    color: var(--muted);
+}
+
+.profile-demo-note {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px;
+    border-radius: var(--radius);
+}
+
+.achievement-item:hover {
+    background: var(--raised);
+}
+
+.achievement-item > div:nth-child(2) {
+    flex: 1;
+}
+
+.achievement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--raised);
+    border-radius: var(--radius);
+    color: var(--accent);
+}
+
+.achievement-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.achievement-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.achievement-check {
+    flex-shrink: 0;
+    color: #4cc38a;
+}
+
+@media (max-width: 900px) {
+    .profile-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-stat-card:nth-child(3) {
+        border-left: 0;
+    }
+
+    .profile-stat-card:nth-child(n + 3) {
+        border-top: 1px solid var(--line);
+    }
+}
+
+@media (max-width: 640px) {
+    .profile-main-info {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px 22px;
+    }
+
+    .profile-level {
+        width: 100%;
+    }
+
+    .profile-heading {
+        align-items: flex-start;
+    }
+}
